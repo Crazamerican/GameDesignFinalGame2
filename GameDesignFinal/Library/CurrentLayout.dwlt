@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 492}
   m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 105
+  controlID: 41
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 50
+  controlID: 42
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -347,28 +347,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a8060000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: fecef5ff5cd3f5ff20d7f5ff74a0f6ff0caaf6ffa880f7ffc280f7ffcc80f7ff8200f8ffd4a8f8ffacaff8ffb2c0f8ff9ec6f8ffdec8f8ff40caf8ffb6ccf8ff8a65f9ff7687f9ff9eb0fbffc863fcffa86dfcffb06efcff567bfcff587cfcff9a7dfcff9efbfffff4ffffff000000004a280000de2800004e5100006a510000b4590000525a000090710000
+    m_ExpandedIDs: 7e9efeff4c9ffeff6aa0feff70a0feff80a0feff46d5ffff4cd5ffff50d5ffffccecffff5aefffff68f5ffff36f6ffff54f7ffff9af7ffff9ef7ffff9efbffff000000009a2b0000a62b0000102c0000242c0000622c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Background
+      m_OriginalName: Background
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -10930
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
   m_ExpandedScenes:
-  - Start
+  - GameScene
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -595,9 +595,9 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: aa270000
-    m_LastClickedID: 10154
-    m_ExpandedIDs: 000000007a27000000ca9a3bffffff7f
+    m_SelectedIDs: ba270000
+    m_LastClickedID: 10170
+    m_ExpandedIDs: 000000008627000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,7 +625,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a270000
+    m_ExpandedIDs: 0000000086270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -656,18 +656,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 222600006c4200007c3200001a7a00001e320000ca2e000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SoundManager
-      m_OriginalName: SoundManager
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -452058
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
@@ -677,9 +677,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 43}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 214
+  m_DirectoriesAreaWidth: 134
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52

@@ -22,6 +22,10 @@ public class Health : MonoBehaviour {
     public void damaged()
     {
         currentHealth--;
+        if(gameObject.GetComponent<PepsiHealthSlider>() != null)
+        {
+            gameObject.GetComponent<PepsiHealthSlider>().updateSlider();
+        }
         if(currentHealth <= 0)
         {
             if(!sound.isPlaying)
