@@ -78,7 +78,7 @@ public class AttackPatternThree : MonoBehaviour {
             rotated = true;
             GameObject newCokeCap = Instantiate(cokeCap) as GameObject;
             newCokeCap.transform.position = gameObject.transform.position;
-            //newCokeCap.GetComponent<CokeCapMovement>().setTarget(player);
+            newCokeCap.GetComponent<touhou>().enabled = false;
         }
 
     }

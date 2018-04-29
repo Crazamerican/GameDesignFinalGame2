@@ -17,11 +17,15 @@ public class CokeCapMovement : MonoBehaviour {
 	void Update () {
 		if(player != null)
         {
-            if(movement == null || movement.Equals(Vector3.zero))
+            if(movement.Equals(Vector3.zero))
             {
                 calculateMovement();
             }
             transform.position = transform.position + movement * speed * Time.deltaTime;
+        }
+        if(transform.position.x > 15 || transform.position.x < -15 || transform.position.y < -8)
+        {
+            Destroy(gameObject);
         }
 	}
 

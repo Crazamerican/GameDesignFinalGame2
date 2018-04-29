@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cokeBottle: {fileID: 1100289226171788, guid: 0c35871404c927849a553ad398930b81, type: 2}
+  cokeCap: {fileID: 1857829642359742, guid: 465307c7977c93e4a8b584af7c8424b9, type: 2}
   player: {fileID: 0}
 --- !u!114 &114754982758410944
 MonoBehaviour:
