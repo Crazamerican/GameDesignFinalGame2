@@ -73,7 +73,7 @@ public class AttackPattern1 : MonoBehaviour {
             angle = angle + 360;
         }
         Vector3 tar = new Vector3(0, 0, angle - 90);
-        Debug.Log(Vector3.Distance(transform.eulerAngles, tar));
+        //Debug.Log(Vector3.Distance(transform.eulerAngles, tar));
         if(Vector3.Distance(transform.eulerAngles, tar) > .5f)
         {
             transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, tar, 1.5f * Time.deltaTime);
@@ -88,7 +88,7 @@ public class AttackPattern1 : MonoBehaviour {
 
     private void calculateToTargetVector()
     {
-        Debug.Log("toTargetVector should happen at least once");
+        //Debug.Log("toTargetVector should happen at least once");
         toTarget = new Vector3(target.position.x - transform.position.x, target.position.y - transform.position.y);
     }
 

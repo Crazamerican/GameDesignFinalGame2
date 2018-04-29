@@ -11,6 +11,8 @@ public class PepsiMovement : MonoBehaviour {
     float backgroundWidth;
     float backgroundHeight;
 
+    PepsiShooting shooting;
+
     float boundsWidthMin;
     float boundsWidthMax;
     float boundsHeightMin;
@@ -24,6 +26,7 @@ public class PepsiMovement : MonoBehaviour {
         boundsHeightMin =  - (1 / 2) * backgroundHeight;
         boundsWidthMax = (1 / 2) * backgroundWidth;
         boundsHeightMax = (1 / 2) * backgroundHeight;
+        shooting = GetComponent<PepsiShooting>();
     }
 	
 	// Update is called once per frame
@@ -45,14 +48,14 @@ public class PepsiMovement : MonoBehaviour {
         {
             transform.position = transform.position + new Vector3(0, -yspeed);
         }
-        if (Input.GetKeyDown(KeyCode.P))
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "pizza")
         {
-            Debug.Log(backgroundHeight);
-            Debug.Log(backgroundWidth);
-            Debug.Log(boundsHeightMin);
-            Debug.Log(boundsHeightMax);
-            Debug.Log(boundsWidthMin);
-            Debug.Log(boundsWidthMax);
+            Destroy(col.gameObject);
+            GetComponent<PepsiShooting>().Upgrade();
         }
     }
 }

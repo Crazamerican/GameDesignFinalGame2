@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114754982758410944}
   - component: {fileID: 114456592691781314}
   - component: {fileID: 50608683988461226}
+  - component: {fileID: 82869309897041284}
+  - component: {fileID: 114199193846805662}
   m_Layer: 0
   m_Name: CokeRocket
   m_TagString: Coke
@@ -39,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894731363759796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.023297625, y: 1.8404711, z: 0}
+  m_LocalPosition: {x: 0.0013604164, y: 3.1630058, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,6 +92,98 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8118497, y: 1.8136235}
   m_EdgeRadius: 0
+--- !u!82 &82869309897041284
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894731363759796}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0b92dfedc4b077c45a7536487436c691, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114199193846805662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894731363759796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb9c04384267664998f55a1faf6cee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
 --- !u!114 &114456592691781314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 25
+  currentHealth: 0
 --- !u!114 &114500815373416418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +211,14 @@ MonoBehaviour:
   cokeBottle: {fileID: 1100289226171788, guid: 0c35871404c927849a553ad398930b81, type: 2}
   cokeCap: {fileID: 1857829642359742, guid: 465307c7977c93e4a8b584af7c8424b9, type: 2}
   player: {fileID: 0}
+  pattern1But: {fileID: 0}
+  pattern2But: {fileID: 0}
+  pattern3But: {fileID: 0}
+  touhouBut: {fileID: 0}
+  pattern1Cooldown: 1
+  pattern2Cooldown: 2
+  pattern3Cooldown: 3
+  touhouCooldown: 1
 --- !u!114 &114754982758410944
 MonoBehaviour:
   m_ObjectHideFlags: 1

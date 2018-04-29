@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coke
   - Pepsi
+  - pizza
   layers:
   - Default
   - TransparentFX

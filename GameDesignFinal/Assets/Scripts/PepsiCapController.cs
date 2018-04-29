@@ -20,11 +20,15 @@ public class PepsiCapController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("We Hit");
+        //Debug.Log("We Hit");
         if(col.gameObject.tag == "Coke")
         {
-            Debug.Log("A Coke Boi");
+            //Debug.Log("A Coke Boi");
             col.gameObject.GetComponent<Health>().damaged();
+            if(col.gameObject.name == "CokeRocket")
+            {
+                col.gameObject.GetComponent<CokeHealthSlider>().updateSlider();
+            }
             Destroy(gameObject);
         }
     }
