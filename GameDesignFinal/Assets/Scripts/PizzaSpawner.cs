@@ -17,7 +17,7 @@ public class PizzaSpawner : MonoBehaviour {
     public void RollTheDice()
     {
         Debug.Log("Spawn the Pizza");
-        if(Random.Range(0,10) > 0)
+        if(Random.Range(0,10) > 7)
         {
             GameObject newPizza = Instantiate(pizza) as GameObject;
             newPizza.transform.position = gameObject.transform.position;

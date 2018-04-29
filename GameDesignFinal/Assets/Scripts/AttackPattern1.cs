@@ -24,7 +24,10 @@ public class AttackPattern1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(target == null)
+        {
+            checkPlayer();
+        }
 		if(!hitStartPoint)
         {
             if (toStart.Equals(Vector3.zero) && (startY != 0 || startX != 0))
@@ -100,13 +103,24 @@ public class AttackPattern1 : MonoBehaviour {
 
     public void movement(float targetX1, float targetY1, float startX1, float startY1)
     {
-        Debug.Log("this should happen upon creation");
+
         this.targetX = targetX1;
         this.targetY = targetY1;
         this.startX = startX1;
         this.startY = startY1;
     }
 
+    void checkPlayer()
+    {
+        GameObject helper = GameObject.Find("PepsiCanPlayer");
+        if (helper == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            target = helper.transform;
+        }
+    }
 
-    
 }

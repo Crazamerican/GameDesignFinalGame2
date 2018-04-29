@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour {
+    public static MusicManager manager = null;
     Component[] sounds;
     List<AudioSource> sources;
 
     float timer;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+        if(manager == null)
+        {
+            manager = this;
+        }
+        else if (manager != this)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
         sounds = GetComponents(typeof(AudioSource));
         sources = new List<AudioSource>();
         foreach(AudioSource sound in sounds)

@@ -23,7 +23,7 @@ public class CokeCapMovement : MonoBehaviour {
             }
             transform.position = transform.position + movement * speed * Time.deltaTime;
         }
-        if(transform.position.x > 15 || transform.position.x < -15 || transform.position.y < -8)
+        if(transform.position.x > 15 || transform.position.x < -15 || transform.position.y < -8 || player == null)
         {
             Destroy(gameObject);
         }

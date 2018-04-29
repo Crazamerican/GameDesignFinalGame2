@@ -16,7 +16,7 @@ public class PepsiShooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey(KeyCode.Z) && timer < Time.time)
+		if(Input.GetKey(KeyCode.LeftShift) && timer < Time.time)
         {
             spawnBullets();
         }

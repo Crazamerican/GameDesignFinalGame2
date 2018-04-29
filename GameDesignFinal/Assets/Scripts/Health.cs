@@ -6,11 +6,13 @@ public class Health : MonoBehaviour {
     public int maxHealth;
     public int currentHealth;
     AudioSource sound;
+    GameObject manager;
 
 	// Use this for initialization
 	void Start () {
         currentHealth = maxHealth;
         sound = GetComponent<AudioSource>();
+        manager = GameObject.Find("VictoryConditions");
 	}
 	
 	// Update is called once per frame
@@ -29,6 +31,14 @@ public class Health : MonoBehaviour {
             if(gameObject.name == "CokeBottle(Clone)")
             {
                 GetComponent<PizzaSpawner>().RollTheDice();
+            }
+            else if (gameObject.name == "CokeRocket")
+            {
+                manager.GetComponent<Victory>().PepsiWin();
+            } 
+            else if (gameObject.name == "PepsiCanPlayer")
+            {
+                manager.GetComponent<Victory>().CokeWin();
             }
             Destroy(gameObject);
         }

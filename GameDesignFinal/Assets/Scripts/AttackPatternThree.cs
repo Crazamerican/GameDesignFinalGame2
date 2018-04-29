@@ -29,6 +29,10 @@ public class AttackPatternThree : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (target == null)
+        {
+            checkPlayer();
+        }
         if (!hitStartPoint)
         {
             if (toStart.Equals(Vector3.zero) && (startY != 0 || startX != 0))
@@ -67,7 +71,6 @@ public class AttackPatternThree : MonoBehaviour {
         float angle = 180;
         
         Vector3 tar = new Vector3(0, 0, angle);
-        Debug.Log(Vector3.Distance(transform.eulerAngles, tar));
         if (Vector3.Distance(transform.eulerAngles, tar) > .5f)
         {
             transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, tar, 1.5f * Time.deltaTime);
@@ -85,7 +88,6 @@ public class AttackPatternThree : MonoBehaviour {
 
     public void movement(float targetX1, float targetY1, float startX1, float startY1)
     {
-        Debug.Log("this should happen upon creation");
         this.targetX = targetX1;
         this.targetY = targetY1;
         this.startX = startX1;
@@ -94,7 +96,6 @@ public class AttackPatternThree : MonoBehaviour {
 
     private void calculateToTargetVector()
     {
-        Debug.Log("toTargetVector should happen at least once");
         toTarget = new Vector3(transform.position.x, -5);
     }
 
@@ -102,5 +103,18 @@ public class AttackPatternThree : MonoBehaviour {
     {
         //Debug.Log("toStartVector should happen at least once");
         toStart = new Vector3(startX - transform.position.x, startY - transform.position.y);
+    }
+
+    void checkPlayer()
+    {
+        GameObject helper = GameObject.Find("PepsiCanPlayer");
+        if (helper == null)
+        {
+            Destroy(gameObject);
+        } 
+        else
+        {
+            target = helper.transform;
+        }
     }
 }
